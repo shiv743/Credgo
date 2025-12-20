@@ -1,0 +1,104 @@
+.comparison-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.comparison-title {
+  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  margin-top: -10px;
+}
+
+.comparison-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card Slot now styled as a glowing box */
+.card-slot {
+  width: 330px;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 0 12px rgba(60, 61, 61, 0.3);
+  border: 2px solid transparent;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Flex container for search */
+.search-bar-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Input */
+.search-input {
+  width: 80%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.search-input:focus {
+  border-color:rgba(60, 61, 61, 0.3);
+  outline: none;
+  box-shadow: 0 0 6px rgba(60, 61, 61, 0.4);
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 18%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  margin-top: 4px;
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.search-suggestions li {
+  padding: 10px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.search-suggestions li:hover {
+  background: #f5faff;
+}
+
+/* Optional button if used later */
+.search-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}

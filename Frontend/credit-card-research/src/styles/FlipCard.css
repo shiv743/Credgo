@@ -1,0 +1,147 @@
+/* Container for the entire flip card + perks */
+.flipcard-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #444545; /* light blue border */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(62, 68, 70, 0.4); /* soft glow */
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 10px;
+}
+
+/* Flip card is now the size of the card image */
+.Cflip-card {
+  perspective: 1000px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  height: 210px;
+  background: transparent;
+  width: 100%;
+}
+
+/* Card image defines the flip area size */
+.card-img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Flip inner area adapts to image size */
+.Cflip-card-inner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  display: inline-block;
+}
+
+/* Flip animation */
+.Cflip-card.flipped .Cflip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.Cflip-card-front,
+.Cflip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+/* Front uses image size */
+.flip-card-front {
+  z-index: 2;
+}
+
+/* Back uses same size as front */
+.Cflip-card-back {
+  transform: rotateY(180deg);
+  background: bisque;
+  padding: 10px;
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Card Info Text */
+.card-info h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.card-info p {
+  font-size: 13px;
+  margin: 3px 0;
+}
+
+/* Static Perks Table Below */
+.perks-table-container {
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding-right: 4px;
+  position: relative;
+}
+
+/* Table */
+.comparision-perks-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* Sticky Header fix */
+.comparision-perks-table thead th {
+  position: sticky;
+  top: 0;
+  background: #e6f7ff;
+  z-index: 1;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Table body */
+.comparision-perks-table td {
+  padding: 10px;
+  border-top: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+.comparision-perks-table tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+/* Scrollbar styling */
+.perks-table-container::-webkit-scrollbar {
+  width: 6px;
+}
+.perks-table-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* Black icons for perk inclusion */
+.perk-detail .icon-check,
+.perk-detail .icon-cross {
+  font-weight: bold;
+  margin-right: 6px;
+  color: black;
+}

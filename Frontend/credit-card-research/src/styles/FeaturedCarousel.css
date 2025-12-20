@@ -1,0 +1,128 @@
+/* Carousel Wrapper */
+.carousel-wrapper {
+    background: #ffffff;
+    padding: 50px 20px;
+    color: #1f2937;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carousel-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110%;
+    max-width: 1400px;
+  }
+  
+  .carousel-track {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 24px;
+    padding: 0 10px 10px 10px;
+  }
+  
+  .carousel-track::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .carousel-track::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  
+  .carousel-card {
+    flex: 0 0 auto;
+    width: 270px;
+    scroll-snap-align: center;
+    border-radius: 16px;
+    padding: 20px 16px;
+    background: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .carousel-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.15);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+  
+  .card-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0 6px;
+    color: #111827;
+  }
+  
+  .card-info p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 4px;
+  }
+  
+  .card-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .card-link:hover {
+    color: #0056b3;
+  }
+  
+  /* Arrows */
+  .apply-btn {
+    display: inline-block;
+    margin-top: 12px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  }
+  
+  .apply-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .carousel-card {
+      width: 220px;
+    }
+  
+    .carousel-title {
+      font-size: 1.5rem;
+    }
+  }
+  

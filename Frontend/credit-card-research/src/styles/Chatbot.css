@@ -1,0 +1,181 @@
+/* 🌐 Chatbot Container */
+.floating-chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 39vw;
+  height: 88vh;
+  background: rgba(255, 255, 255, 0.277);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* 🟦 Header (Darkest Transparency Layer) */
+.chatbot-header {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cred-text {
+  color: #007bff;
+}
+
+.go-text {
+  color: #000000;
+}
+
+/* 🟦 FAQ Suggestions (Medium Transparency) */
+.faq-bar {
+  padding: 10px;
+  background: rgba(240, 244, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.faq-button {
+  background-color: rgba(0, 123, 255, 0.2); /* light blue transparent */
+  color: #007bff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 3px rgba(0, 123, 255, 0.1);
+}
+
+.faq-button:hover {
+  background-color: rgba(0, 123, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
+}
+.faq-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+
+/* 💬 Chat Area (Lightest Transparency) */
+.chat-box {
+  flex: 1;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 🗨️ Message Bubbles */
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.message-row.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  font-size: 20px;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.message-row.user .message-bubble {
+  background-color: rgba(212, 252, 212, 0.6);
+}
+
+/* ✨ Bot Typing */
+.typing {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: gray;
+  text-align: center;
+}
+
+/* ✏️ Input Area */
+.input-area {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.input-area input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 15px;
+  background-color: white;
+}
+
+.input-area button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+  background-color: #218838;
+}
+
+/* 🔍 Scrollbar Styling */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* 💡 Markdown-style bold */
+.highlight-bold {
+  font-weight: bold;
+  color: #222;
+}
